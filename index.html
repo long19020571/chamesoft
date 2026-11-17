@@ -428,6 +428,109 @@
       margin-bottom: 1rem;
     }
 
+    /* ── PRODUCTION SERVICE ── */
+    .production-service {
+      padding-block: 3.5rem;
+    }
+    .production-service h2 {
+      font-family: var(--display);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      text-wrap: balance;
+      margin-bottom: 0.5rem;
+    }
+    .production-service .subdesc {
+      color: var(--fg-mid);
+      font-size: 0.95rem;
+      max-width: 560px;
+      margin-bottom: 1.5rem;
+    }
+    .subsection-title {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+      margin: 2.4rem 0 1rem;
+    }
+
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+    @media (max-width: 860px) {
+      .strength-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .strength-grid { grid-template-columns: 1fr; }
+    }
+    .strength-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .strength-head {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 0.6rem;
+    }
+    .strength-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+    .strength-card h3 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .strength-card p {
+      color: var(--fg-mid);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .callout.neutral {
+      background: var(--surface-dim);
+      border-color: var(--border);
+    }
+    .callout.neutral h3 { color: var(--fg); }
+
+    .simple-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+    .simple-list li {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: var(--fg-mid);
+      line-height: 1.6;
+      list-style: none;
+    }
+    .simple-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 9px;
+      flex-shrink: 0;
+    }
+
     /* ── DESIGN ORDER ── */
     .design-order {
       padding-block: 3.5rem;
@@ -701,6 +804,7 @@
       <ul class="header-nav" id="nav">
         <li><a href="#products">Products</a></li>
         <li><a href="#why">About</a></li>
+        <li><a href="#production-service">Production Service</a></li>
         <li><a href="#design-order">Cutting &amp; Printing</a></li>
         <li><a href="#contact" class="cta-link">Contact</a></li>
       </ul>
@@ -809,6 +913,110 @@
             <h3>Direct support</h3>
             <p>Talk directly to the engineer who built it. Fast responses, real solutions, no ticket queues.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Production Service -->
+    <section class="production-service" id="production-service">
+      <div class="wrap">
+        <div class="eyebrow">Automation Service</div>
+        <h2>Batch Design Processing &amp; Production — Fast, Accurate, No Errors</h2>
+        <p class="subdesc">An automated Adobe Illustrator workflow that processes large-volume orders in a fraction of the time, with exact precision from design file to printed or cut product.</p>
+
+        <h3 class="subsection-title">Challenges You're Facing</h3>
+        <div class="feat-grid">
+          <div class="feat">
+            <div class="feat-dot"></div>
+            <p>Processing each Illustrator design file by hand is slow and error-prone once order volume grows.</p>
+          </div>
+          <div class="feat">
+            <div class="feat-dot"></div>
+            <p>Misaligned print/cut positioning leads to defective output and wasted material.</p>
+          </div>
+          <div class="feat">
+            <div class="feat-dot"></div>
+            <p>Keeping data and settings in sync across many templates, customers, and production batches is hard.</p>
+          </div>
+          <div class="feat">
+            <div class="feat-dot"></div>
+            <p>No way to check quality before a file actually goes to the printer or cutter.</p>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">Our Solution — Key Strengths</h3>
+        <div class="strength-grid">
+          <div class="strength-card reveal">
+            <div class="strength-head">
+              <div class="strength-icon">⚡</div>
+              <h3>Outstanding processing speed</h3>
+            </div>
+            <p>Automates every repetitive action in Adobe Illustrator (COM automation) and batch-processes large numbers of orders or templates at once — cutting processing time from hours down to minutes.</p>
+          </div>
+          <div class="strength-card reveal">
+            <div class="strength-head">
+              <div class="strength-icon">🎯</div>
+              <h3>Precision down to the last detail</h3>
+            </div>
+            <p>Advanced geometry processing calculates and aligns print and cut areas for each template, removing manual error and getting size and position right the first time.</p>
+          </div>
+          <div class="strength-card reveal">
+            <div class="strength-head">
+              <div class="strength-icon">🛡</div>
+              <h3>Smart error-checking before production</h3>
+            </div>
+            <p>Automatically detects misalignment or mismatched data and lets you review and fix it before exporting — so no error reaches the real printer or cutter.</p>
+          </div>
+          <div class="strength-card reveal">
+            <div class="strength-head">
+              <div class="strength-icon">🧩</div>
+              <h3>Customized per customer, per order</h3>
+            </div>
+            <p>Each template and customer can have its own configuration (position, size, special effects). The system stores and applies the right configuration to every order, with no mix-ups between batches.</p>
+          </div>
+          <div class="strength-card reveal">
+            <div class="strength-head">
+              <div class="strength-icon">📦</div>
+              <h3>Built for real production volume</h3>
+            </div>
+            <p>Built to run reliably with large, continuous order volumes — suited for print shops, print-on-demand production, and large-scale contract manufacturing.</p>
+          </div>
+          <div class="strength-card reveal">
+            <div class="strength-head">
+              <div class="strength-icon">💾</div>
+              <h3>Production-ready file export</h3>
+            </div>
+            <p>Exports directly to multiple pre-aligned formats (AI, PNG, and more) — ready to feed straight into the printer or cutter with no further adjustment.</p>
+          </div>
+          <div class="strength-card reveal">
+            <div class="strength-head">
+              <div class="strength-icon">🏗</div>
+              <h3>Modern, stable technology foundation</h3>
+            </div>
+            <p>Built on .NET 8 with a clean MVVM architecture, deeply integrated with Adobe Illustrator — stable to run, and easy to extend and upgrade as needs grow.</p>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">Quality Commitments</h3>
+        <div class="callout neutral reveal">
+          <ul>
+            <li><strong>Automated pre-export checks:</strong> every file has its position and data reviewed before it's finalized — minimizing human error.</li>
+            <li><strong>Consistency across production batches:</strong> configurations are stored and reused exactly, so batch 1 and batch 1,000 come out the same quality.</li>
+            <li><strong>Transparent, auditable process:</strong> every processing step keeps a record of its configuration and details, easy to trace back when needed.</li>
+          </ul>
+        </div>
+
+        <h3 class="subsection-title">Who This Is For</h3>
+        <ul class="simple-list">
+          <li>Print shops producing large volumes of stickers, labels, or decals.</li>
+          <li>Print-on-demand operations handling many different design templates every day.</li>
+          <li>Businesses that want to outsource the design-file processing step before it goes to the printer or cutter.</li>
+        </ul>
+
+        <div style="text-align:center; margin-top:2.4rem;">
+          <h3 style="font-family:var(--display); font-weight:700; font-size:1.1rem; margin-bottom:0.5rem;">Need large-volume design processing that's accurate and on schedule?</h3>
+          <p class="subdesc" style="margin:0 auto 1.3rem; text-align:center;">Get in touch for a consultation and a demo of the automated processing workflow.</p>
+          <a href="#contact" class="btn btn-fill">Request a Demo</a>
         </div>
       </div>
     </section>
