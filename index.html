@@ -428,6 +428,166 @@
       margin-bottom: 1rem;
     }
 
+    /* ── DESIGN ORDER ── */
+    .design-order {
+      padding-block: 3.5rem;
+    }
+    .design-order h2 {
+      font-family: var(--display);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      text-wrap: balance;
+      margin-bottom: 0.5rem;
+    }
+    .design-order .subdesc {
+      color: var(--fg-mid);
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin-bottom: 2rem;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 760px) {
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem;
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .step-card h3 {
+      font-family: var(--display);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .step-card p {
+      color: var(--fg-mid);
+      font-size: 0.84rem;
+      line-height: 1.6;
+    }
+
+    .callout {
+      background: var(--accent-pale);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.4rem 1.6rem;
+      margin-top: 1.5rem;
+    }
+    .callout h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+      color: var(--accent-deep);
+    }
+    .callout ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .callout li {
+      font-size: 0.85rem;
+      color: var(--fg-mid);
+      line-height: 1.6;
+    }
+    .callout li strong { color: var(--fg); }
+
+    .materials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+    @media (max-width: 540px) {
+      .materials-grid { grid-template-columns: 1fr; }
+    }
+    .material-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.3rem 1.4rem;
+    }
+    .material-card h3 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .material-card p {
+      color: var(--fg-mid);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+    .material-note {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: var(--fg-mid);
+      background: var(--surface-dim);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      line-height: 1.6;
+    }
+
+    .faq-list {
+      margin-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item summary {
+      cursor: pointer;
+      padding: 1rem 0;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 0.9rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      flex-shrink: 0;
+      font-size: 1.2rem;
+      color: var(--accent);
+      transition: transform 0.15s;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p {
+      color: var(--fg-mid);
+      font-size: 0.85rem;
+      line-height: 1.65;
+      max-width: 580px;
+      padding-bottom: 1.1rem;
+    }
+
     /* ── CONTACT ── */
     .contact-band {
       background: var(--surface-dim);
@@ -541,6 +701,7 @@
       <ul class="header-nav" id="nav">
         <li><a href="#products">Products</a></li>
         <li><a href="#why">About</a></li>
+        <li><a href="#design-order">Cutting &amp; Printing</a></li>
         <li><a href="#contact" class="cta-link">Contact</a></li>
       </ul>
       <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu">
@@ -648,6 +809,84 @@
             <h3>Direct support</h3>
             <p>Talk directly to the engineer who built it. Fast responses, real solutions, no ticket queues.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Order -->
+    <section class="design-order" id="design-order">
+      <div class="wrap">
+        <div class="eyebrow">Cutting &amp; Printing Service</div>
+        <h2>Order Custom Cutting &amp; Printing — Wood · Acrylic</h2>
+        <p class="subdesc">Send your design, pick the material and quantity — we handle the printing and CNC cutting to match your file exactly.</p>
+
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-num">1</div>
+            <h3>Send your design</h3>
+            <p>Send the image by email, WhatsApp, or a Google Drive link (shared publicly).</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">2</div>
+            <h3>Choose material &amp; quantity</h3>
+            <p>Wood or acrylic, thickness (mm), and the quantity to cut.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">3</div>
+            <h3>Confirm the order</h3>
+            <p>We check the file, then send you a quote and a completion time.</p>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">4</div>
+            <h3>Receive it</h3>
+            <p>Your piece is printed and cut to size, then shipped or picked up as agreed.</p>
+          </div>
+        </div>
+
+        <div class="callout reveal">
+          <h3>Design file requirements — read before sending</h3>
+          <ul>
+            <li><strong>Format:</strong> PNG, JPG, BMP, or GIF. WEBP files are not accepted.</li>
+            <li><strong>One image, two parts:</strong> a <strong>PRINT</strong> part (the artwork/pattern to print) and a <strong>CUT</strong> part (the outline to cut), both in the same file.</li>
+            <li><strong>The CUT part must be a solid shape on a transparent background</strong> — clean edges, no jagged lines, saved as PNG with alpha (not a white background).</li>
+            <li><strong>Keep the real-world size:</strong> if using Photoshop/Illustrator, export at 300 DPI so the physical size (mm) matches the image.</li>
+            <li><strong>Using Google Drive?</strong> Share a link to each individual image file (not a folder), with sharing set to "Anyone with the link".</li>
+          </ul>
+        </div>
+
+        <div class="materials-grid">
+          <div class="material-card reveal">
+            <h3>Wood</h3>
+            <p>CNC-cut to match your design exactly, in a range of thicknesses depending on your piece.</p>
+          </div>
+          <div class="material-card reveal">
+            <h3>Acrylic</h3>
+            <p>Clear, frosted, or colored — cut precisely along your design's outline.</p>
+          </div>
+        </div>
+        <p class="material-note">Each order should use a single material and thickness, since pieces are processed in batches from the same sheet of material. If you need different materials or thicknesses, please place separate orders.</p>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>I don't have Google Drive — can I send the image another way?</summary>
+            <p>Yes — send the design directly by email or message, no Drive required.</p>
+          </details>
+          <details class="faq-item">
+            <summary>My image doesn't have a transparent background — will you still accept it?</summary>
+            <p>We can still take it, but it may take longer since it needs adjusting — it's best to separate the CUT part onto a transparent background (PNG alpha) before sending for faster, more accurate processing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I need several materials or thicknesses in one order?</summary>
+            <p>Please split them into separate orders by material/thickness — pieces are processed in batches from the same sheet of material.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How much does it cost and how long does it take?</summary>
+            <p>It depends on material, thickness, and quantity — send your design by email or message for a quote and a specific timeline.</p>
+          </details>
+        </div>
+
+        <div style="text-align:center; margin-top:2.2rem;">
+          <a href="#contact" class="btn btn-fill">Send Your Design &amp; Get a Quote</a>
         </div>
       </div>
     </section>
